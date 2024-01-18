@@ -1,0 +1,9 @@
+npm i -g typescript
+tsc -v
+tsc -init
+
+
+
+curso: https://www.youtube.com/watch?v=lCemyQeSCV8&t=46s
+Sigue: 46:00
+
