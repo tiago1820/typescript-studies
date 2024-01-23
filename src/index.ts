@@ -232,7 +232,52 @@ class SuperCar extends Car {
 }
 
 const a4 = new SuperCar("Audi", 4,2.0);
+console.log(a4);
+
 a4.showBrand();
+
+// decorators
+function BaseParameters() {
+    return function <T extends {new (...args: any[]): {}}>(constructor: T){
+        return class extends constructor {
+            id = Math.random();
+            createdAt = new Date();
+        }
+    }
+}
+
+@BaseParameters()
+
+class Person {
+    name
+
+    constructor(name: string) {
+        this.name = name
+    }
+}
+
+const sam = new Person("Sam");
+
+console.log(sam);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
