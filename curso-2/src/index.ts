@@ -76,6 +76,103 @@
 //     console.log(avenger.toUpperCase())
 // })
 
+// Objetos
+// let hero = {
+//     name: "thor",
+//     age: 1500
+// };
+
+// function createHero(name: string, age: number) {
+//     return {
+//         name, age
+//     }
+// }
+
+// createHero("Thor", 1500)
+
+// Type Alias
+// type Hero = {
+//     name: string,
+//     age: number
+// }
+
+// let hero: Hero = {
+//     name: "thor",
+//     age: 1500
+// };
+
+// function createHero(hero: Hero): Hero {
+//     const { name, age } = hero;
+//     return { name, age }
+// }
+
+// createHero({ name: "Thor", age: 1500 });
+
+// Optional properties
+// type HeroId = `${string}-${string}-${string}-${string}-${string}`;
+
+// type Hero = {
+//     readonly id?: HeroId
+//     name: string
+//     age: number
+//     isActive?: boolean
+// }
+
+// let hero: Hero = {
+//     name: "thor",
+//     age: 1500
+// };
+
+// function createHero(hero: Hero): Hero {
+//     const { name, age } = hero;
+//     return { 
+//         id: crypto.randomUUID(),
+//         name, 
+//         age, 
+//         isActive: true 
+//     }
+// }
+
+// const thor = Object.freeze(createHero({ name: "Thor", age: 1500 }));
+// console.log(thor.isActive);
+
+// thor.id?.toString;
+// thor.id = 2323232323232323;
+
+// template union types
+// type HexadecimalColor = `#${string}`;
+// const color: HexadecimalColor = "0033ff"; // hexadecimales
+// const color2: HexadecimalColor = "#0033ff"; // hexadecimales
+
+// Union Types
+type HeroId = `${string}-${string}-${string}-${string}-${string}`;
+type HeroPowerScale = "local" | "planetary" | "galatic" | "universal" | "multiversal";
+
+type Hero = {
+    readonly id?: HeroId
+    name: string
+    age: number
+    isActive?: boolean,
+    powerScale?: HeroPowerScale
+}
+
+let hero: Hero = {
+    name: "thor",
+    age: 1500
+};
+
+function createHero(hero: Hero): Hero {
+    const { name, age } = hero;
+    return { 
+        id: crypto.randomUUID(),
+        name, 
+        age, 
+        isActive: true 
+    }
+}
+
+const thor = createHero({ name: "Thor", age: 1500 });
+thor.powerScale = "galatic";
 
 
 
