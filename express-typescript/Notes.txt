@@ -1,0 +1,45 @@
+npm init -y
+npm install typescript -D
+
+"scripts":{
+    "tsc": "tsc",
+    "start": "node build/index.js"
+    "dev": "ts-node-dev src/index.ts",
+
+}
+
+crea el archivo tsconfig
+npm run tsc -- --init
+
+tsconfig
+"target": "es0215"
+"module": "commonjs"
+"outDir": "./build"
+"strict": true
+"noUnusedLocals":true
+"noUnusedParameters":true
+"noImplicitReturns":true
+"noFallthroughCasesInSwitch": true
+"esModuleInterop":true
+"skipLibCheck":true
+"forceConsitentCasingInFileNames": true
+"resolveJsonModule": true, 
+
+npm install express -E
+
+Definitely Typed
+npm install @types/express -D
+
+packagephobia.com
+
+npm install ts-node-dev -D
+
+npm install ts-standard -D
+
+
+
+https://www.youtube.com/watch?v=ZpY5KdGQvwI&t=3335s
+continue: 41:00
+
+
+
